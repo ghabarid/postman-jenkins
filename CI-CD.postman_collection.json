@@ -14,7 +14,7 @@
 						"id": "c798d025-ae23-43a6-868c-fd9373b21037",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(300);",
 							"});",
 							"",
 							"//let user = pm.response.json()[0] ",
