@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-							"test-env": "newman run /home/ridha/projects/sandbox/postman/CI-CD.postman_collection.json"
+							"test-env": "newman run CI-CD.postman_collection.json"
 						,
 						"type": "text/javascript"
 					}
