@@ -11,8 +11,25 @@
 				{
 					"listen": "test",
 					"script": {
-							"test-env": "newman run /home/ridha/projects/sandbox/postman/CI-CD.postman_collection.json"
-						,
+						"id": "c798d025-ae23-43a6-868c-fd9373b21037",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"//let user = pm.response.json()[0] ",
+							"//console.log(\">>> \" + user.id)",
+							"",
+							"let user = pm.response.json().find(o=>o.userId==1)",
+							"console.log(user)",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(user.id).to.eq(1);",
+							"});",
+							"",
+							""
+						],
 						"type": "text/javascript"
 					}
 				}
