@@ -1,7 +1,7 @@
 pipeline {
   agent any
 
-  tools {nodejs "node"}
+  tools {nodejs "node", maven "maven"}
 
   stages {
 
@@ -15,6 +15,7 @@ pipeline {
 
     stage('Install newman') {
       steps {
+        sh 'mvn -version'
         /* sh 'echo WE ARE STARTING THE TEST ...'
         sh 'npm install -g newman' */
         withMaven(maven: 'maven'){
