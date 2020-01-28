@@ -15,7 +15,7 @@ pipeline {
 
     stage('Install newman') {
       steps {
-
+        sh 'echo WE ARE STARTING THE TEST ...'
         sh 'npm install -g newman'
       }
     }
