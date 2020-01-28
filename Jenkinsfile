@@ -19,6 +19,7 @@ pipeline {
         sh 'npm install -g newman'
         withMaven(maven: 'RGH-Maven') 'mvn -version'){
             mvn -version
+
         }
       }
     }
