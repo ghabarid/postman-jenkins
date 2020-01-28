@@ -18,7 +18,7 @@ pipeline {
         sh 'echo WE ARE STARTING THE TEST ...'
         sh 'npm install -g newman'
         withMaven(maven: 'RGH-Maven'){
-            mvn -version
+            sh 'mvn -version'
 
         }
       }
