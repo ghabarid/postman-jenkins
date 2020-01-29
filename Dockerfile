@@ -19,5 +19,5 @@ RUN set -ex \
     && cd /usr/local/bin \
     && cd /
 
-# Switch to jenkins user
+# Switch to jenkins user ... 
 USER jenkins
